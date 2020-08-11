@@ -1,0 +1,32 @@
+pragma solidity >= 0.5.0;
+
+contract AssociateProfitSplitter{
+    address payable employee_one = 0xeF9E0dd799533e6D0826BB950901C543e7893040;
+    address payable employee_two = 0xCC5D11b3C5d29541Afb6b156576bCcF4A211103b;
+    address payable employee_three = 0x5391abE83B2BB0D44973CF2B934E5bf2F0061Aba;
+    
+    constructor(address payable _one, address payable _two, address payable _three) public {
+        employee_one = _one;
+        employee_two = _two;
+        employee_three = _three;
+        
+    }
+    function balance() public view returns(uint) {
+        return address(this).balance;   
+    }
+    function deposit() public payable{
+        uint amount = msg.value / 3;
+        employee_one.transfer(amount);
+        employee_two.transfer(amount);
+        employee_three.transfer(amount);
+        msg.sender.transfer(msg.value - amount * 3);
+    }  
+
+    
+    
+    function() external payable {
+        deposit();
+        
+    }
+    
+}
