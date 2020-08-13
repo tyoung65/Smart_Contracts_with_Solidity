@@ -13,7 +13,7 @@ The contract address is 0x165abfcb18e656141005bbf004cfd00cdf55e1e4
 ## Tiered Profit Splitter
 
 The Tiered Profit Splitter contract was deployed on the Kovan network.
-The Tiered Profit Splitter contract will divide any ethereum received using a percentage allocation. Wallet one will receive 60%, wallet two will received 25% and wallet three will receive 15% of all ethereum received. 
+The Tiered Profit Splitter contract will divide any ethereum received using a percentage allocation. Wallet one will receive 60%, wallet two will receive 25% and wallet three will receive 15% of all ethereum received. 
 
 You can view a transaction using this contract with transaction hash: 0xdd4b006af54ea0a534ee26ecc8cf11b2719f90f8525c3f6ad382d619988d8662.
 
